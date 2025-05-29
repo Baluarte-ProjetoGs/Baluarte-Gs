@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flexbox;
 }
 
 :root {
@@ -18,8 +19,6 @@ body {
   font-family: var(--fonte);
   background-color: var(--branco);
   color: var(--cinza-escuro);
-  position: sticky;
-  display: flexbox;
 }
 
 /* NAVBAR */
@@ -41,6 +40,22 @@ header {
   height: 100px;
 }
 
+@keyframes pulsarLogo{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform:scale(1)
+    }
+}
+
+.animarLogo:hover{
+    animation: pulsarLogo 2s infinite;
+}
+
 .menu-links {
   display: flex;
   gap: 24px;
@@ -60,7 +75,6 @@ header {
   border-bottom: 2px solid;
 }
 
-/* bANNER */
 .hero {
   background-color: var(--azul-escuro);
   text-align: center;
@@ -98,7 +112,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 64px 32px;
+  padding: 40px 32px;
   max-width: 1200px;
   margin: 0 auto;
   gap: 32px;
@@ -107,6 +121,14 @@ header {
 .itens.reverse {
   flex-direction: row-reverse;
   background-color: var(--ciano);
+  border-radius:8px; 
+}
+
+.imagens {
+  display: flexbox;
+  flex-direction: column; 
+  gap: 16px; 
+  max-width: 200px; 
 }
 
 .itens img {
@@ -117,8 +139,8 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.itens div {
-  flex: 1 1 45%;
+img:hover{
+    transform: scale(1.05)
 }
 
 .itens h2 {
@@ -132,6 +154,29 @@ header {
   margin-bottom: 16px;
 }
 
+.itens h3{
+    color: #093757;
+}
+
+.itens.column {
+  flex-direction: column;
+  text-align: center;
+}
+
+.image-duo {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.image-duo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 footer {
   text-align: center;
   background-color: var(--azul-escuro);
@@ -140,41 +185,3 @@ footer {
   color: var(--branco);
 }
 
-
-.image-grid {
-  display: flex;
-  gap: 1.5rem;
-  flex: 1 1 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.image-grid img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/*arrumar aqui */
-.itens.column {
-  flex-direction: column;
-  text-align: center;
-}
-
-/* Container com as duas imagens lado a lado */
-.image-banner {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.image-banner img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
