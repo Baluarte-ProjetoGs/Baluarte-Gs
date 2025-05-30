@@ -198,6 +198,30 @@
         <div id="mensagemFinal" class="success"></div>
       </form>
     </div>
+
+    <div id="quizTab" style="display:none;">
+      <h2>Quiz: Você está preparado?</h2>
+      <div id="quiz"></div>
+      <div id="resultado"></div>
+      <button id="reiniciar" style="display:none; margin-top:18px;" class="tab-btn">Reiniciar Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const menuIcons = document.getElementById('menuIcons');
+
+    hamburger.onclick = function () {
+      navbar.classList.toggle('open');
+    };
+
+    document.addEventListener('click', function (e) {
+      if (!navbar.contains(e.target)) {
+        navbar.classList.remove('open');
+      }
+    });
     
+  </script>
 </body>
 </html>
