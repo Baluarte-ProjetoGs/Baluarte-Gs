@@ -221,7 +221,104 @@
         navbar.classList.remove('open');
       }
     });
-    
+
+    // Personalização de tema
+    const body = document.body;
+    const container = document.getElementById('container');
+    const lightBtn = document.getElementById('lightBtn');
+    const darkBtn = document.getElementById('darkBtn');
+    const accessibleBtn = document.getElementById('accessibleBtn');
+    const allBtns = [lightBtn, darkBtn, accessibleBtn];
+    const allTabBtns = document.querySelectorAll('.tab-btn');
+    const allInputs = document.querySelectorAll('input');
+
+    function setLightMode() {
+      body.className = "";
+      navbar.className = "navbar";
+      container.className = "container";
+      allBtns.forEach(btn => btn.classList.remove('dark-mode', 'accessible-mode', 'active'));
+      allTabBtns.forEach(btn => btn.classList.remove('dark-mode','accessible-mode'));
+      allInputs.forEach(input => input.className = "");
+      lightBtn.classList.add('active');
+    }
+    function setDarkMode() {
+      body.className = "dark-mode";
+      navbar.className = "navbar dark-mode";
+      container.className = "container dark-mode";
+      allBtns.forEach(btn => btn.classList.remove('dark-mode', 'accessible-mode', 'active'));
+      allBtns[1].classList.add('dark-mode', 'active');
+      allTabBtns.forEach(btn => btn.classList.add('dark-mode'));
+      allInputs.forEach(input => {input.className = "dark-mode";});
+    }
+    function setAccessibleMode() {
+      body.className = "accessible-mode";
+      navbar.className = "navbar accessible-mode";
+      container.className = "container accessible-mode";
+      allBtns.forEach(btn => btn.classList.remove('dark-mode', 'accessible-mode', 'active'));
+      allBtns[2].classList.add('accessible-mode', 'active');
+      allTabBtns.forEach(btn => btn.classList.add('accessible-mode'));
+      allInputs.forEach(input => {input.className = "accessible-mode";});
+    }
+    lightBtn.onclick = setLightMode;
+    darkBtn.onclick = setDarkMode;
+    accessibleBtn.onclick = setAccessibleMode;
+    setLightMode();
+
+    // Trocas de abas (Cadastro/Quiz)
+    const cadastroTabBtn = document.getElementById('cadastroTabBtn');
+    const quizTabBtn = document.getElementById('quizTabBtn');
+    const cadastroTab = document.getElementById('cadastroTab');
+    const quizTab = document.getElementById('quizTab');
+    cadastroTabBtn.onclick = function() {
+      cadastroTab.style.display = '';
+      quizTab.style.display = 'none';
+      cadastroTabBtn.classList.add('active');
+      quizTabBtn.classList.remove('active');
+    }
+    quizTabBtn.onclick = function() {
+      cadastroTab.style.display = 'none';
+      quizTab.style.display = '';
+      cadastroTabBtn.classList.remove('active');
+      quizTabBtn.classList.add('active');
+      mostrarPergunta();
+    }
+
+    // Validação de formulário
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let nome = document.getElementById('nome').value.trim();
+      let email = document.getElementById('email').value.trim();
+      let senha = document.getElementById('senha').value;
+      let confirmarSenha = document.getElementById('confirmarSenha').value;
+
+      let valido = true;
+      document.getElementById('erroNome').textContent = '';
+      document.getElementById('erroEmail').textContent = '';
+      document.getElementById('erroSenha').textContent = '';
+      document.getElementById('erroConfirmarSenha').textContent = '';
+      document.getElementById('mensagemFinal').textContent = '';
+
+      if (nome.length < 2 || /\d/.test(nome)) {
+        document.getElementById('erroNome').textContent = 'Digite um nome válido (mín. 2 letras, sem números).';
+        valido = false;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById('erroEmail').textContent = 'Digite um e-mail válido.';
+        valido = false;
+      }
+      if (senha.length < 6 || !/\d/.test(senha) || !/[a-zA-Z]/.test(senha)) {
+        document.getElementById('erroSenha').textContent = 'A senha deve ter 6 caracteres, uma letra e um número.';
+        valido = false;
+      }
+      if (senha !== confirmarSenha) {
+        document.getElementById('erroConfirmarSenha').textContent = 'As senhas não conferem.';
+        valido = false;
+      }
+      if (valido) {
+        document.getElementById('mensagemFinal').textContent = 'Cadastro realizado com sucesso!';
+      }
+    });
+
   </script>
 </body>
 </html>
