@@ -11,6 +11,7 @@
     --azul: #1D84CE;
     --fonte: 'Inter', sans-serif;
     --branco: #ffffff;
+    --fonte2: 'Bebas Neue'
 }
 
 body {
@@ -24,6 +25,10 @@ header {
     border-bottom: 1px solid;
 }
 
+header h1 {
+    font-family: var(--fonte2);
+}
+
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,6 +40,19 @@ header {
 
 .logo img {
     height: 100px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-texto {
+    font-size: 50px;
+    color: var(--ciano);
+
 }
 
 @keyframes pulsarLogo {
