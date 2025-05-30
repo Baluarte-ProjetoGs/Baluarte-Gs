@@ -59,6 +59,64 @@
       border-radius: 3px;
       transition: 0.4s;
     }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 12px;
+      }
+      .icons {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .navbar.open .icons {
+        display: flex;
+        position: absolute;
+        top: 56px;
+        right: 10px;
+        background: #1677d2;
+        flex-direction: column;
+        gap: 6px;
+        box-shadow: 0 2px 8px #0001;
+        padding: 10px 18px;
+        border-radius: 12px;
+        z-index: 1005;
+      }
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #0001;
+      padding: 28px 20px 40px 20px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+    .tab-btn {
+      background: #e0e7ef;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #1677d2;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #1677d2;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
