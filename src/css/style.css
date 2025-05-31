@@ -267,6 +267,49 @@ button.btn {
     color: var(--branco);
 }
 
+
+/* SLIDE SHOW */
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 400px;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+
+button.esquerdo,
+button.direito {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000066;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+button.esquerdo{
+  left: 10px;
+}
+
+button.direito {
+  right: 10px;
+}
+
+
+
+
 footer {
     text-align: center;
     background-color: var(--azul-escuro);
