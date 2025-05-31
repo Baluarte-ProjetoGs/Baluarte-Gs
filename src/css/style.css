@@ -20,6 +20,8 @@ body {
     color: var(--cinza-escuro);
 }
 
+
+/* CSS Header */
 header {
     background-color: var(--azul-escuro);
     border-bottom: 1px solid;
@@ -86,12 +88,63 @@ header h1 {
     transition: color 0.3s;
 }
 
+/* CSS do Menu Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--ciano);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 32px;
+    background-color: var(--azul-escuro);
+    border-top: 1px solid #ffffff33;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--ciano);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .menu-links a:hover,
 .menu-links a.active {
     color: var(--ciano);
     border-bottom: 2px solid;
 }
 
+
+/* CSS do Banner */
 .hero {
     background-color: var(--azul-escuro);
     text-align: center;
@@ -124,6 +177,7 @@ header h1 {
     background-color: var(--ciano);
 }
 
+/* CSS das Seções */
 .itens {
     display: flex;
     align-items: center;
@@ -193,82 +247,9 @@ img:hover {
 }
 
 
-form input,
-textarea {
-    margin: 10px 0 15px;
-}
 
 
-.formulario-section {
-    background-color: var(--cinza-claro);
-    border-radius: 8px;
-    padding: 40px 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.formulario-tudo {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.formulario-tudo h2 {
-    font-size: 32px;
-    color: var(--azul-escuro);
-    margin-bottom: 8px;
-}
-
-.formulario-tudo p {
-    margin-bottom: 32px;
-    color: var(--azul-escuro);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.formulario-div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.formulario-div label {
-    font-weight: 600px;
-    margin-bottom: 8px;
-    color: var(--azul-escuro);
-}
-
-.formulario-div input,
-.formulario-div textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    font-family: var(--fonte);
-}
-
-.formulario-div input:focus,
-.formulario-div textarea:focus {
-    border-color: var(--ciano);
-    outline: none;
-}
-
-button.btn {
-    padding: 12px 32px;
-    font-size: 16px;
-    background-color: var(--azul);
-    border: none;
-    font-weight: 600;
-    border-radius: 5px;
-    color: var(--branco);
-}
-
-
-/* SLIDE SHOW */
+/* CSS SlideShow */
 .slideshow {
   position: relative;
   width: 100%;
@@ -308,8 +289,6 @@ button.direito {
 }
 
 
-
-
 footer {
     text-align: center;
     background-color: var(--azul-escuro);
@@ -317,3 +296,22 @@ footer {
     font-size: 14px;
     color: var(--branco);
 }
+
+/* Css dos Icones Interativos de cor */
+.icons {
+      display: flex;
+      gap: 18px;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      color: #fff;
+      padding: 6px;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    .icon-btn:hover, .icon-btn.active {
+      background: #155ea8;
+    }

@@ -1,4 +1,4 @@
-
+// JavaScript do SlideShow
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
 
@@ -30,3 +30,11 @@ function autoPlay() {
 
 mostrarSlide(slideIndex);
 autoPlay()
+
+// JavaScript do Menu Hamburger
+const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });

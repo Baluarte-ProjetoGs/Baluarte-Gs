@@ -26,7 +26,45 @@
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#como-funciona">Aplicação</a></li>
             </ul>
+
+            <div class="navbar" id="navbar">
+
+                <div class="icons" id="menuIcons">
+                    <button class="icon-btn" id="lightBtn" title="Modo Claro">☀</button>
+                    <button class="icon-btn" id="darkBtn" title="Modo Escuro">🌙</button>
+                    <button class="icon-btn" id="accessibleBtn" title="Alto Contraste">👁</button>
+                </div>
+                <div class="hamburger" id="hamburger" aria-label="Abrir menu" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <!-- Menu Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#objetivos">Nosso Objetivo</a></li>
+                <li><a href="#publico">Público-Alvo</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#como-funciona">Aplicação</a></li>
+            </ul>
+
+            <div class="icons" id="menuIcons">
+                <button class="icon-btn" id="lightBtn" title="Modo Claro">☀</button>
+                <button class="icon-btn" id="darkBtn" title="Modo Escuro">🌙</button>
+                <button class="icon-btn" id="accessibleBtn" title="Alto Contraste">👁</button>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -37,6 +75,8 @@
         </section>
 
         <br>
+
+        <!-- SlideShow -->
         <div class="slideshow">
             <img class="slide" src="src/assets/img/imagemSlide1.webp" alt="Imagem 1">
             <img class="slide" src="src/assets/img/imgSlide2.jpeg" alt="Imagem 2">
@@ -46,6 +86,7 @@
             <button class="direito" onclick="mudarSlide(1)">❯</button>
         </div>
 
+        <!-- Seções Front End -->
         <section id="problema" class="itens">
             <img src="src/assets/img/enchente1.jpeg" alt="Imagem de enchente no Vale do Taqui, Rio Grande do Sul" />
             <div>
@@ -118,31 +159,51 @@
 
         <br>
 
-        <section id="contato" class="formulario-section">
-            <div class="formulario-tudo">
-                <h2>Entre em contato</h2>
-                <p>Tem dúvidas,sugestões ou quer colaborar? Fale com a gente.</p>
+        <section>
+        <div class="container" id="container">
+            <div class="tabs">
+                <button class="tab-btn active" id="cadastroTabBtn">Cadastro</button>
+                <button class="tab-btn" id="quizTabBtn">Quiz</button>
+            </div>
 
-                <form action="#">
-                    <div class="formulario-div">
+            <div id="cadastroTab">
+                <h2>Cadastro</h2>
+                <form id="cadastroForm" autocomplete="off">
+                    <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" />
+                        <input type="text" id="nome" name="nome">
+                        <div class="error" id="erroNome"></div>
                     </div>
-
-                    <div class="formulario-div">
+                    <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu email" />
+                        <input type="email" id="email" name="email">
+                        <div class="error" id="erroEmail"></div>
                     </div>
-
-                    <div class="formulario-div">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha">
+                        <div class="error" id="erroSenha"></div>
                     </div>
-
-                    <button type="submit" class="btn">Enviar</button>
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirmar Senha</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha">
+                        <div class="error" id="erroConfirmarSenha"></div>
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                    <div id="mensagemFinal" class="success"></div>
                 </form>
             </div>
-        </section>
+
+            <div id="quizTab" style="display:none;">
+                <h2>Quiz: Você está preparado?</h2>
+                <div id="quiz"></div>
+                <div id="resultado"></div>
+                <button id="reiniciar" style="display:none; margin-top:18px;" class="tab-btn">Reiniciar Quiz</button>
+            </div>
+        </div>
+    </section>
+
+
 
     </main>
 
