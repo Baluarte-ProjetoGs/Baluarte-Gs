@@ -33,11 +33,11 @@ header h1 {
 
 .navbar {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 32px;
+    padding: 16px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo img {
@@ -163,7 +163,7 @@ header h1 {
     color: var(--branco);
 }
 
-.botaoContato {
+.botao {
     background-color: var(--azul);
     color: var(--branco);
     padding: 12px 24px;
@@ -173,7 +173,7 @@ header h1 {
     border-radius: 5px;
 }
 
-.botaoContato:hover {
+.botao:hover {
     background-color: var(--ciano);
 }
 
@@ -246,46 +246,43 @@ img:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 /* CSS SlideShow */
 .slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 8px;
-  height: 400px;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 400px;
 }
 
 .slide {
-  width: 100%;
-  display: none;
+    width: 100%;
+    display: none;
 }
 
 
 button.esquerdo,
 button.direito {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #00000066;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00000066;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
 }
 
-button.esquerdo{
-  left: 10px;
+button.esquerdo {
+    left: 10px;
 }
 
 button.direito {
-  right: 10px;
+    right: 10px;
 }
 
 
@@ -299,19 +296,313 @@ footer {
 
 /* Css dos Icones Interativos de cor */
 .icons {
-      display: flex;
-      gap: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover,
+.icon-btn.active {
+    background: #155ea8;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #99c;
+}
+
+.error {
+    color: #c00;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.success {
+    color: #080;
+}
+
+button[type="submit"] {
+    background: #1677d2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 28px 20px 40px 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.tab-btn {
+    background: #e0e7ef;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1677d2;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: #1677d2;
+    color: #fff;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #99c;
+}
+
+.error {
+    color: #c00;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.success {
+    color: #080;
+}
+
+button[type="submit"] {
+    background: #1677d2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Quiz */
+.quiz-box {}
+
+.pergunta {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.opcao {
+    background: #e0e7ef;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opcao:hover {
+    background: #d0e3fb;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Personalização de temas */
+body.dark-mode {
+    background: #181c25;
+    color: #d1eaff;
+}
+
+.navbar.dark-mode {
+    background: #1b232d;
+    color: #70b5ff;
+}
+
+.icon-btn.dark-mode {
+    color: #70b5ff;
+}
+
+.tab-btn.dark-mode {
+    background: #28354c;
+    color: #70b5ff;
+}
+
+.tab-btn.dark-mode.active,
+.tab-btn.dark-mode:hover {
+    background: #70b5ff;
+    color: #181c25;
+}
+
+.container.dark-mode {
+    background: #23293b;
+}
+
+input.dark-mode {
+    background: #23293b;
+    color: #d1eaff;
+    border: 1px solid #70b5ff;
+}
+
+body.accessible-mode {
+    background: #000;
+    color: #14816f;
+}
+
+.navbar.accessible-mode {
+    background: #000;
+    color: #14816f;
+}
+
+.icon-btn.accessible-mode {
+    color: #14816f;
+}
+
+.tab-btn.accessible-mode {
+    background: #222;
+    color: #14816f;
+}
+
+.tab-btn.accessible-mode.active,
+.tab-btn.accessible-mode:hover {
+    background: #14816f;
+    color: #000;
+}
+
+.container.accessible-mode {
+    background: #111;
+    color: #14816f;
+}
+
+input.accessible-mode {
+    background: #000;
+    color: #14816f;
+    border: 1px solid #14816f;
+}
+
+
+/* Media para deixar o código responsivo e podermos usar o menu hamburger */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
     }
-    .icon-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 22px;
-      color: #fff;
-      padding: 6px;
-      border-radius: 5px;
-      transition: background 0.2s;
+
+    .hamburger {
+        display: flex;
     }
-    .icon-btn:hover, .icon-btn.active {
-      background: #155ea8;
+
+    .logo-texto {
+        font-size: 32px;
     }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .logo {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .logo-texto {
+        font-size: 32px;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .itens {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 16px;
+    }
+
+    .itens.reverse {
+        flex-direction: column;
+    }
+
+    .itens img {
+        max-width: 100%;
+    }
+
+    .imagens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-duo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-duo img {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 24px 16px;
+    }
+}
