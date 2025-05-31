@@ -21,7 +21,6 @@ body {
 }
 
 
-/* CSS Header */
 header {
     background-color: var(--azul-escuro);
     border-bottom: 1px solid;
@@ -88,7 +87,6 @@ header h1 {
     transition: color 0.3s;
 }
 
-/* CSS do Menu Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -143,8 +141,6 @@ header h1 {
     border-bottom: 2px solid;
 }
 
-
-/* CSS do Banner */
 .hero {
     background-color: var(--azul-escuro);
     text-align: center;
@@ -177,7 +173,7 @@ header h1 {
     background-color: var(--ciano);
 }
 
-/* CSS das Seções */
+
 .itens {
     display: flex;
     align-items: center;
@@ -246,7 +242,7 @@ img:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS SlideShow */
+
 .slideshow {
     position: relative;
     width: 100%;
@@ -294,7 +290,7 @@ footer {
     color: var(--branco);
 }
 
-/* Css dos Icones Interativos de cor */
+
 .icons {
     display: flex;
     gap: 18px;
@@ -385,7 +381,6 @@ button[type="submit"] {
     color: #fff;
 }
 
-/* Formulário */
 .form-group {
     margin-bottom: 16px;
 }
@@ -420,7 +415,7 @@ button[type="submit"] {
     border-radius: 5px;
 }
 
-/* Quiz */
+
 .quiz-box {}
 
 .pergunta {
@@ -445,7 +440,7 @@ button[type="submit"] {
     font-size: 18px;
 }
 
-/* Personalização de temas */
+
 body.dark-mode {
     background: #181c25;
     color: #d1eaff;
@@ -518,7 +513,6 @@ input.accessible-mode {
 }
 
 
-/* Media para deixar o código responsivo e podermos usar o menu hamburger */
 @media (max-width: 768px) {
     .menu-links {
         display: none;
