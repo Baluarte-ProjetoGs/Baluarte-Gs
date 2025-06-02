@@ -18,8 +18,6 @@ Baluarte é uma plataforma web colaborativa desenvolvida para oferecer suporte, 
 
 ☁️ Previsões meteorológicas hiperlocais integradas com APIs confiáveis
 
-📬 Formulário de contato para sugestões, dúvidas ou colaboração
-
 ## 🧱 Tecnologias utilizadas
 HTML5 e CSS3 com Flexbox
 
